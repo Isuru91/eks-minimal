@@ -11,11 +11,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "terraform-state-eks-minimal"
-    key            = "terraform.tfstate"
+    bucket         = "terraformtest-backend"
+    key            = "eks-minimal/terraform.tfstate"
     region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "terraform-state-lock"
   }
 
   required_version = ">= 1.0.0"
