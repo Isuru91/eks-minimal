@@ -18,7 +18,7 @@ This project creates a minimal AWS EKS cluster using Terraform with an S3 backen
 
 ## Setup Instructions
 
-1. Create the S3 bucket and DynamoDB table for the Terraform backend: [terraform Documentation](Documentation)
+1. Create the S3 bucket and DynamoDB table for the Terraform backend: [[terraform Documentation](Documentation)](https://developer.hashicorp.com/terraform/language/backend/s3#enabling-s3-state-locking)
 
 ```bash
 # Create S3 bucket
