@@ -18,7 +18,7 @@ This project creates a minimal AWS EKS cluster using Terraform with an S3 backen
 
 ## Setup Instructions
 
-1. Create the S3 bucket and DynamoDB table for the Terraform backend:
+1. Create the S3 bucket and DynamoDB table for the Terraform backend: [[terraform Documentation](Documentation)](https://developer.hashicorp.com/terraform/language/backend/s3#enabling-s3-state-locking)
 
 ```bash
 # Create S3 bucket
@@ -27,7 +27,7 @@ aws s3api create-bucket --bucket terraform-state-eks-minimal --region us-east-1
 # Enable versioning on the bucket
 aws s3api put-bucket-versioning --bucket terraform-state-eks-minimal --versioning-configuration Status=Enabled
 
-# Create DynamoDB table for state locking
+# Create DynamoDB table for state locking (Deprecated)
 aws dynamodb create-table \
   --table-name terraform-state-lock \
   --attribute-definitions AttributeName=LockID,AttributeType=S \
