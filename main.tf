@@ -11,9 +11,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "terraformtest-backend"
-    key            = "eks-minimal/terraform.tfstate"
-    region         = "us-east-1"
+    bucket = "terraformtest-backend"
+    key    = "eks-minimal/terraform.tfstate"
+    region = "us-east-1"
   }
 
   required_version = ">= 1.0.0"
