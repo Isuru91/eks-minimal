@@ -11,12 +11,14 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "terraformtest-backend"
+    bucket = "ie-locked-terraform-state"
     key    = "eks-minimal/terraform.tfstate"
     region = "us-east-1"
+    encrypt = true
+    use_lockfile = true
   }
 
-  required_version = ">= 1.0.0"
+  required_version = ">= 1.12.0"
 }
 
 provider "aws" {
