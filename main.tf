@@ -11,10 +11,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "ie-locked-terraform-state"
-    key    = "eks-minimal/terraform.tfstate"
-    region = "us-east-1"
-    encrypt = true
+    bucket       = "ie-locked-terraform-state"
+    key          = "eks-minimal/terraform.tfstate"
+    region       = "us-east-1"
+    encrypt      = true
     use_lockfile = true
   }
 
