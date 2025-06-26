@@ -7,7 +7,7 @@ This project creates a minimal AWS EKS cluster using Terraform with an S3 backen
 - AWS CLI configured with appropriate credentials
 - Terraform installed (version >= 1.0.0)
 - S3 bucket for Terraform state
-- DynamoDB table for state locking
+- DynamoDB table for state locking (Deprecated)
 
 ## Infrastructure Components
 
